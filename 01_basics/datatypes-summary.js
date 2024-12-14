@@ -45,3 +45,30 @@ console.log(typeof myFunc); //object function
 //Return type of all reference data types is object
 
 
+/*
+Stack and Heap memory: 
+
+Stack(Primitive), Heap(Non-primitive)
+When we use Stack memory, we get a copy of the variable we declared
+When we use Heap memory , we get the reference of the original value. 
+So whatever we change, the original value will be changed
+*/
+
+let phoneName = "Apple"
+let computerName = phoneName;
+computerName = "Lenovo"
+console.log(phoneName); // Apple
+console.log(computerName); //Lenovo
+//Call by Value happening above
+
+let userOne = {
+    name : "Saptodeep",
+    email : "sapto@gmail.com"
+}
+let userTwo = userOne;
+userTwo.email = "deep@gmail.com"
+console.log(userOne.email); //deep@gmail.com
+console.log(userTwo.email); //deep@gmail.com
+//Call by Reference happening above
+
+
