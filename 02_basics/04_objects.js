@@ -64,3 +64,29 @@ console.log(Object.entries(tinderUser)); //returns an array of arrays
 //[ [ 'id', '123abc' ], [ 'name', 'Subho' ], [ 'isLoggedIn', false ] ]
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn')); //true
+
+
+//object destructuring
+const course = {
+    courseName: "JS in Hindi",
+    coursePrice: "999",
+    courseInstructor: "Hitesh Choudhary"
+}
+
+// const { courseInstructor } = course;
+// console.log(courseInstructor);
+
+const { courseInstructor: instructor } = course;
+console.log(instructor);
+
+
+/*
+JSON - JavaScript Object Notation
+
+JSON object
+{
+    "name": "hitesh",
+    "coursePrice": "free",
+    "courseName": "JS in Hindi"
+}
+*/
