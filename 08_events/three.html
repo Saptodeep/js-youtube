@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript tutorial</title>
+</head>
+<body>
+    <h1>Chai aur JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayHi = function(str){
+        console.log(str, Date.now())
+    }
+
+    const intervalTimer = setInterval(sayHi, 1000, "Hi")
+    let startIntervalTimer;
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(intervalTimer)
+        clearInterval(startIntervalTimer)
+    })
+
+    document.querySelector('#start').addEventListener('click', function(){
+        startIntervalTimer = setInterval(sayHi, 1000, "Hi")
+    })
+    
+</script>
+</html>
+
+<!-- setInterval can take three arguments as well: a handler function(or call back function),the timeout number
+     and any value to pass it to the function  -->

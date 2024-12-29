@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript tutorial</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log("Saptodeep")
+    // }, 2000)
+
+    const sayMessage = function(){
+        console.log("Saptodeep")
+    }
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = 'Javascript series'
+    }
+
+    setTimeout(sayMessage, 2000)
+    const changeMeTimer = setTimeout(changeText, 2000)
+
+    //we need to pass function reference inside clearTimeout to clear all the callbacks for that setTimeout 
+    // function which are there in the Task Queue
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMeTimer)
+        console.log('STOPPED')
+    })
+</script>
+</html>
+
+<!-- setTimeout takes two arguments: a handler function(or call back function) and the timeout number -->
